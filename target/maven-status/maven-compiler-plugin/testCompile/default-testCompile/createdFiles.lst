@@ -1,0 +1,4 @@
+com\company\attendance\repository\EmployeeRepositoryTest.class
+com\company\attendance\service\EmployeeServiceTest.class
+com\company\attendance\service\LeaveServiceTest.class
+com\company\attendance\service\AttendanceServiceTest.class

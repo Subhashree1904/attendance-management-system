@@ -1,0 +1,272 @@
+<html>
+<head>
+<title>TestNG:  Surefire test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Surefire test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>15/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Oct 06 22:12:26 IST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>0 seconds (219 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.company.attendance.service.LeaveServiceTest.testRejectLeave_changesStatus()'><b>testRejectLeave_changesStatus</b><br>Test class: com.company.attendance.service.LeaveServiceTest</td>
+<td></td>
+<td>0</td>
+<td>com.company.attendance.service.LeaveServiceTest@223f3642</td></tr>
+<tr>
+<td title='com.company.attendance.service.AttendanceServiceTest.testClockOutSuccess_calculatesHours()'><b>testClockOutSuccess_calculatesHours</b><br>Test class: com.company.attendance.service.AttendanceServiceTest</td>
+<td></td>
+<td>0</td>
+<td>com.company.attendance.service.AttendanceServiceTest@5bfa9431</td></tr>
+<tr>
+<td title='com.company.attendance.repository.EmployeeRepositoryTest.testGenerateAttendanceReport_and_monthlyHours()'><b>testGenerateAttendanceReport_and_monthlyHours</b><br>Test class: com.company.attendance.repository.EmployeeRepositoryTest</td>
+<td></td>
+<td>0</td>
+<td>com.company.attendance.repository.EmployeeRepositoryTest@1d082e88</td></tr>
+<tr>
+<td title='com.company.attendance.service.EmployeeServiceTest.testAddDuplicateEmployeeThrows()'><b>testAddDuplicateEmployeeThrows</b><br>Test class: com.company.attendance.service.EmployeeServiceTest</td>
+<td><div><pre>com.company.attendance.exception.DuplicateEmployeeException: Employee with email bob@example.com already exists!
+	at com.company.attendance.service.EmployeeService.addEmployee(EmployeeService.java:21)
+	at com.company.attendance.service.EmployeeServiceTest.testAddDuplicateEmployeeThrows(EmployeeServiceTest.java:49)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1278677872", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1278677872'><pre>com.company.attendance.exception.DuplicateEmployeeException: Employee with email bob@example.com already exists!
+	at com.company.attendance.service.EmployeeService.addEmployee(EmployeeService.java:21)
+	at com.company.attendance.service.EmployeeServiceTest.testAddDuplicateEmployeeThrows(EmployeeServiceTest.java:49)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:151)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:192)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:93)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+</pre></div></td>
+<td>0</td>
+<td>com.company.attendance.service.EmployeeServiceTest@5db250b4</td></tr>
+<tr>
+<td title='com.company.attendance.service.AttendanceServiceTest.testClockInSuccess()'><b>testClockInSuccess</b><br>Test class: com.company.attendance.service.AttendanceServiceTest<br>Parameters: 10</td>
+<td></td>
+<td>0</td>
+<td>com.company.attendance.service.AttendanceServiceTest@5bfa9431</td></tr>
+<tr>
+<td title='com.company.attendance.service.AttendanceServiceTest.testClockInSuccess()'><b>testClockInSuccess</b><br>Test class: com.company.attendance.service.AttendanceServiceTest<br>Parameters: 2</td>
+<td></td>
+<td>0</td>
+<td>com.company.attendance.service.AttendanceServiceTest@5bfa9431</td></tr>
+<tr>
+<td title='com.company.attendance.service.AttendanceServiceTest.testDuplicateClockInThrows()'><b>testDuplicateClockInThrows</b><br>Test class: com.company.attendance.service.AttendanceServiceTest</td>
+<td><div><pre>com.company.attendance.exception.InvalidAttendanceException: Employee 1 has already clocked in today!
+	at com.company.attendance.service.AttendanceService.clockIn(AttendanceService.java:23)
+	at com.company.attendance.service.AttendanceServiceTest.testDuplicateClockInThrows(AttendanceServiceTest.java:54)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1118078504", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1118078504'><pre>com.company.attendance.exception.InvalidAttendanceException: Employee 1 has already clocked in today!
+	at com.company.attendance.service.AttendanceService.clockIn(AttendanceService.java:23)
+	at com.company.attendance.service.AttendanceServiceTest.testDuplicateClockInThrows(AttendanceServiceTest.java:54)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:151)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:192)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:93)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+</pre></div></td>
+<td>0</td>
+<td>com.company.attendance.service.AttendanceServiceTest@5bfa9431</td></tr>
+<tr>
+<td title='com.company.attendance.service.AttendanceServiceTest.testClockOutWithoutClockInThrows()'><b>testClockOutWithoutClockInThrows</b><br>Test class: com.company.attendance.service.AttendanceServiceTest</td>
+<td><div><pre>com.company.attendance.exception.InvalidAttendanceException: Employee 99 cannot clock out without clocking in!
+	at com.company.attendance.service.AttendanceService.clockOut(AttendanceService.java:41)
+	at com.company.attendance.service.AttendanceServiceTest.testClockOutWithoutClockInThrows(AttendanceServiceTest.java:60)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1793799654", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1793799654'><pre>com.company.attendance.exception.InvalidAttendanceException: Employee 99 cannot clock out without clocking in!
+	at com.company.attendance.service.AttendanceService.clockOut(AttendanceService.java:41)
+	at com.company.attendance.service.AttendanceServiceTest.testClockOutWithoutClockInThrows(AttendanceServiceTest.java:60)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:151)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:192)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:93)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+</pre></div></td>
+<td>0</td>
+<td>com.company.attendance.service.AttendanceServiceTest@5bfa9431</td></tr>
+<tr>
+<td title='com.company.attendance.service.LeaveServiceTest.testApplyForLeave_invalidDateRange()'><b>testApplyForLeave_invalidDateRange</b><br>Test class: com.company.attendance.service.LeaveServiceTest</td>
+<td></td>
+<td>0</td>
+<td>com.company.attendance.service.LeaveServiceTest@223f3642</td></tr>
+<tr>
+<td title='com.company.attendance.service.AttendanceServiceTest.testPreventDuplicateClockInsSameDay()'><b>testPreventDuplicateClockInsSameDay</b><br>Test class: com.company.attendance.service.AttendanceServiceTest</td>
+<td></td>
+<td>0</td>
+<td>com.company.attendance.service.AttendanceServiceTest@5bfa9431</td></tr>
+<tr>
+<td title='com.company.attendance.service.EmployeeServiceTest.testAddEmployeeSuccess()'><b>testAddEmployeeSuccess</b><br>Test class: com.company.attendance.service.EmployeeServiceTest</td>
+<td></td>
+<td>0</td>
+<td>com.company.attendance.service.EmployeeServiceTest@5db250b4</td></tr>
+<tr>
+<td title='com.company.attendance.service.EmployeeServiceTest.testGetAllEmployees()'><b>testGetAllEmployees</b><br>Test class: com.company.attendance.service.EmployeeServiceTest</td>
+<td></td>
+<td>0</td>
+<td>com.company.attendance.service.EmployeeServiceTest@5db250b4</td></tr>
+<tr>
+<td title='com.company.attendance.service.LeaveServiceTest.testApplyForLeave_success()'><b>testApplyForLeave_success</b><br>Test class: com.company.attendance.service.LeaveServiceTest</td>
+<td></td>
+<td>0</td>
+<td>com.company.attendance.service.LeaveServiceTest@223f3642</td></tr>
+<tr>
+<td title='com.company.attendance.service.LeaveServiceTest.testApproveLeave_changesStatus()'><b>testApproveLeave_changesStatus</b><br>Test class: com.company.attendance.service.LeaveServiceTest</td>
+<td></td>
+<td>0</td>
+<td>com.company.attendance.service.LeaveServiceTest@223f3642</td></tr>
+<tr>
+<td title='com.company.attendance.service.AttendanceServiceTest.testClockInSuccess()'><b>testClockInSuccess</b><br>Test class: com.company.attendance.service.AttendanceServiceTest<br>Parameters: 1</td>
+<td></td>
+<td>0</td>
+<td>com.company.attendance.service.AttendanceServiceTest@5bfa9431</td></tr>
+</table><p>
+</body>
+</html>
